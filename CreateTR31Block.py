@@ -142,13 +142,16 @@ class tr31block:
         print "20)PIN verification, KPV, other algorithm"
         print "21)PIN verification, IBM 3624"
         print "22)PIN Verification, VISA PVV"
+        print "23)Asymmetric key pair for digital signature"
+        print "24)Asymmetric key pair, CA key"
+        print "25)Asymmetric key pair, nonX9.24 key"
         selection = raw_input("Enter a number:(default = 19): ")
         if selection == '':
             selection = '19'
         strReturn = {
 "1":"B0","2":"C0","3":"D0","4": "E0","5":"E1","6":"E2","7":"E3","8":"E4","9":"E5","10":"E6",
 "11": "I0","12": "K0","13": "M0","14": "M1","15":"M2","16":"M3","17":"M4","18":"M5","19":"P0",
-"20":"V0","21":"V1","22":"V2"
+"20":"V0","21":"V1","22":"V2","23":"S0","24":"S1","25":"S2"
 }[selection]
         return strReturn
 
