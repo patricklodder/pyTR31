@@ -245,7 +245,7 @@ class tr31block:
         selection = raw_input("Enter Number (default=1):")
         if selection == "":
             selection = '1' 
-        strReturn = {'1':'E',2:'N',3:'S'}[selection]
+        strReturn = {'1':'E','2':'N','3':'S'}[selection]
         return strReturn
 
     def getRandomPadding(self):
