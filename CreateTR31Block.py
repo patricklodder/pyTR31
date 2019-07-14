@@ -41,7 +41,7 @@ class tr31block:
             self.MAC = self.getMAC("".join(self.tempKeyBlock))
             self.finalKeyBlock.append(self.header)
             self.finalKeyBlock.append(self.encryptedKey.encode("hex"))    
-            self.finalKeyBlock.append(self.MAC.encode("hex").upper)
+            self.finalKeyBlock.append(self.MAC.encode("hex").upper())
             
         elif (self.keyBlockType == "B"):
             self.tempKeyBlock.append(self.header)
