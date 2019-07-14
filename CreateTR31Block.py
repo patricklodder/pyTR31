@@ -191,7 +191,7 @@ class tr31block:
     def generatePtKB(self): #generate the plaintext key block
         keypacket = list()
         keyLength = len(self.key) * 8
-        hexLength = int(chr(keyLength).encode("hex"))
+        hexLength = int("".join([chr(keyLength//256),chr(keyLength % 256)]).encode("hex"))
         lengthEncoded ="%04d"%hexLength
         keypacket.append(lengthEncoded.decode("hex"))   #length 0080 is 128 bits long
         keypacket.append(self.key)
